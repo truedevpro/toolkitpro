@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Toolkit Pro</title>
+
     <meta name="description"
-          content="Toolkit Pro - A collection of useful everyday utility tools for Android.">
+          content="Toolkit Pro - Useful everyday utility tools for Android.">
+
+    <meta name="theme-color" content="#2563eb">
 
     <style>
         * {
@@ -21,20 +24,20 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 30px 20px 60px;
         }
 
         .hero {
             background: white;
             border-radius: 24px;
-            padding: 50px 30px;
+            padding: 45px 30px;
             text-align: center;
             box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
         }
 
-        .icon {
+        .logo {
             width: 110px;
             height: 110px;
             border-radius: 24px;
@@ -45,14 +48,15 @@
         h1 {
             margin: 0 0 12px;
             font-size: 42px;
+            color: #172554;
         }
 
         .subtitle {
+            max-width: 700px;
+            margin: 0 auto 28px;
             color: #64748b;
             font-size: 18px;
             line-height: 1.6;
-            max-width: 650px;
-            margin: 0 auto 30px;
         }
 
         .buttons {
@@ -64,10 +68,11 @@
 
         .button {
             display: inline-block;
-            padding: 14px 24px;
+            padding: 14px 25px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.2s ease;
         }
 
         .primary {
@@ -75,52 +80,100 @@
             color: white;
         }
 
+        .primary:hover {
+            background: #1d4ed8;
+        }
+
         .secondary {
             background: #e8eefc;
             color: #1d4ed8;
         }
 
+        .secondary:hover {
+            background: #dbe7ff;
+        }
+
         .section {
             background: white;
             margin-top: 24px;
-            border-radius: 20px;
             padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
         }
 
         .section h2 {
             margin-top: 0;
+            color: #172554;
+        }
+
+        .section p {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .feature-image {
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+            border-radius: 18px;
+            margin-top: 15px;
+            background: #f8fafc;
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
             gap: 16px;
+            margin-top: 20px;
         }
 
         .feature {
-            padding: 20px;
             background: #f8fafc;
-            border-radius: 14px;
+            padding: 22px;
+            border-radius: 15px;
         }
 
         .feature h3 {
             margin-top: 0;
+            color: #1d4ed8;
+        }
+
+        .feature p {
+            margin-bottom: 0;
+            font-size: 15px;
         }
 
         footer {
             text-align: center;
             color: #64748b;
             font-size: 14px;
-            padding: 30px 0;
+            padding-top: 30px;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
         }
 
         @media (max-width: 600px) {
+            .container {
+                padding: 20px 14px 40px;
+            }
+
+            .hero {
+                padding: 35px 20px;
+            }
+
             h1 {
                 font-size: 34px;
             }
 
-            .hero {
-                padding: 40px 20px;
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 22px;
             }
         }
     </style>
@@ -130,13 +183,12 @@
 
 <div class="container">
 
-    <div class="hero">
+    <!-- Hero -->
+    <section class="hero">
 
-        <!-- Keep toolkit_icon.png in the same repository if you want to show it -->
-        <img src="toolkit_icon.png"
-             alt="Toolkit Pro"
-             class="icon"
-             onerror="this.style.display='none';">
+        <img src="logo.png"
+             alt="Toolkit Pro Logo"
+             class="logo">
 
         <h1>Toolkit Pro</h1>
 
@@ -147,9 +199,10 @@
 
         <div class="buttons">
 
-            <!-- Replace YOUR_PACKAGE_NAME with the actual package name -->
             <a class="button primary"
-               href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME">
+               href="https://play.google.com/store/apps/details?id=com.tool.toolkitpro"
+               target="_blank"
+               rel="noopener">
                 Get it on Google Play
             </a>
 
@@ -160,58 +213,105 @@
 
         </div>
 
-    </div>
+    </section>
 
-    <div class="section">
+
+    <!-- Feature Graphic -->
+    <section class="section">
+
         <h2>Toolkit Pro</h2>
 
         <p>
-            Toolkit Pro provides practical utility features including
-            QR and barcode scanning, flashlight and SOS tools, and other
-            helpful device utilities.
+            Toolkit Pro brings together practical utility tools in one
+            convenient Android application. Access useful features quickly
+            whenever you need them.
         </p>
+
+        <img src="fg.png"
+             alt="Toolkit Pro Features"
+             class="feature-image">
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="section">
+
+        <h2>Useful Tools in One App</h2>
 
         <div class="features">
 
             <div class="feature">
                 <h3>QR & Barcode Scanner</h3>
                 <p>
-                    Scan QR codes and barcodes quickly using your device camera.
+                    Quickly scan QR codes and barcodes using your device camera.
                 </p>
             </div>
 
             <div class="feature">
                 <h3>Flashlight</h3>
                 <p>
-                    Quickly access your device flashlight whenever needed.
+                    Turn your device flashlight on or off quickly whenever
+                    you need it.
                 </p>
             </div>
 
             <div class="feature">
                 <h3>SOS</h3>
                 <p>
-                    Convenient access to flashlight-based SOS functionality.
+                    Convenient flashlight-based SOS functionality for
+                    emergency situations.
                 </p>
             </div>
 
             <div class="feature">
-                <h3>Useful Utilities</h3>
+                <h3>Everyday Utilities</h3>
                 <p>
-                    Everyday tools designed for quick and convenient access.
+                    Simple and practical tools designed for everyday use.
                 </p>
             </div>
 
         </div>
-    </div>
 
-    <footer>
-        © 2026 Toolkit Pro. All rights reserved.
-        <br><br>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        &nbsp; | &nbsp;
-        <a href="mailto:developersblog.info@gmail.com">
-            Contact Support
+    </section>
+
+
+    <!-- Privacy -->
+    <section class="section">
+
+        <h2>Privacy</h2>
+
+        <p>
+            Toolkit Pro is designed with privacy in mind and minimizes the
+            collection of personal information. Some features require access
+            to specific device capabilities such as the camera and flashlight.
+        </p>
+
+        <a class="button secondary"
+           href="privacy-policy.html">
+            Read Privacy Policy
         </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        © 2026 Toolkit Pro. All rights reserved.
+
+        <br><br>
+
+        <a href="privacy-policy.html">
+            Privacy Policy
+        </a>
+
+        &nbsp; | &nbsp;
+
+        <a href="mailto:developersblog.info@gmail.com">
+            Developer Support
+        </a>
+
     </footer>
 
 </div>
